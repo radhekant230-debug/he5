@@ -1,0 +1,80 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--bg-2);
+}
+.hero--fallback {
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(168, 132, 90, 0.1), transparent 55%),
+    linear-gradient(to bottom, var(--espresso), var(--bg));
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 17, 13, 0.55) 0%,
+    rgba(20, 17, 13, 0.3) 45%,
+    rgba(25, 23, 20, 0.94) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 24px;
+  max-width: 860px;
+}
+
+.hero__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: clamp(64px, 11vw, 128px);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero__subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  letter-spacing: 0.52em;
+  text-indent: 0.52em;
+  text-transform: uppercase;
+  color: var(--bronze-soft);
+  margin-top: 10px;
+}
+
+.hero__tagline {
+  margin: 28px auto 44px;
+  max-width: 520px;
+  font-size: 16.5px;
+  color: #d3cab9;
+}
+
+.hero__actions { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+.hero__scroll {
+  position: absolute;
+  bottom: 30px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 10.5px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}

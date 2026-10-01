@@ -1,0 +1,95 @@
+:root {
+  --bg: #191714;
+  --bg-2: #201d18;
+  --bg-3: #262219;
+  --espresso: #2b2118;
+  --line: #37312a;
+  --text: #ece5d8;
+  --muted: #a29888;
+  --bronze: #a8845a;
+  --bronze-soft: #c2a179;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; }
+
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+.section { padding: 110px 0; }
+
+.eyebrow {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-size: clamp(32px, 4.6vw, 50px);
+  letter-spacing: 0.02em;
+}
+.section-title span { display: block; }
+
+.rule { width: 56px; height: 1px; background: var(--bronze); margin: 30px 0; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid var(--bronze);
+  background: transparent;
+  color: var(--bronze-soft);
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+.btn:hover { background: var(--bronze); color: #17130e; }
+.btn--solid { background: rgba(168, 132, 90, 0.12); }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.in-view { opacity: 1; transform: none; }
+
+/* Placeholder for missing media */
+.media-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(168, 132, 90, 0.08), transparent 60%),
+    var(--bg-3);
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 860px) {
+  .section { padding: 76px 0; }
+}
