@@ -23,7 +23,10 @@ export const sliderImages = [
 ];
 
 // About section supporting photo.
-export const aboutImage = "/media/about.jpg";
+export const aboutImage = "/media/about.png";
+
+// Experience section full-screen background photo.
+export const experienceBg = "/media/exp-bg.png";
 
 // Drinks section supporting photo (optional).
 export const drinksImage = "/media/slider-1.jpg";
@@ -37,11 +40,30 @@ export const galleryImages = [
   "/media/gallery-4.jpg",
   "/media/gallery-5.jpg",
   "/media/gallery-6.jpg",
+  "/media/gallery-7.png",
+  "/media/gallery-8.png",
 ];
 
 // Bakery section photos.
 export const bakeryImages = [
   "/media/bakery-1.jpg",
+];
+
+// Descriptive alt text for gallery and slider images (SEO + accessibility).
+export const galleryCaptions = [
+  "Interior of HEAVEN Lounge & Bar",
+  "Cocktail service at the HEAVEN bar",
+  "Lounge seating and low lighting at HEAVEN",
+  "Guests enjoying the evening at HEAVEN",
+  "Bar counter and glassware at HEAVEN",
+  "Night atmosphere inside HEAVEN Lounge & Bar",
+];
+
+export const sliderCaptions = [
+  "HEAVEN Lounge & Bar exterior at night",
+  "Interior seating at HEAVEN Lounge & Bar",
+  "Cocktails poured at the HEAVEN bar",
+  "The lounge room at HEAVEN after dark",
 ];
 
 // Videos for the cinematic video section (hero video excluded).

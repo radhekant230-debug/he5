@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { gallery } from "../data/content.js";
-import { galleryImages } from "../data/media.js";
+import { galleryImages, galleryCaptions } from "../data/media.js";
 
 export default function Gallery() {
   const [lightbox, setLightbox] = useState(null);

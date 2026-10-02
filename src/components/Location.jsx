@@ -25,6 +25,15 @@ export default function Location() {
             {location.cta}
           </Button>
 
+          <div className="location__hours">
+            {location.openingHours.map((h) => (
+              <div className="location__hours-row" key={h.days}>
+                <span>{h.days}</span>
+                <span>{h.hours}</span>
+              </div>
+            ))}
+          </div>
+
           <div className="platforms">
             <span className="platforms__label">{location.platformsLabel}</span>
             <div className="platforms__row">

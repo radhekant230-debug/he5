@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heaven4.netlify.app/sitemap.xml

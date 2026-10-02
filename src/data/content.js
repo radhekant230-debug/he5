@@ -29,24 +29,19 @@ export const about = {
 };
 
 export const experience = {
-  eyebrow: "THE EXPERIENCE",
-  heading: "FOUR REASONS TO STAY LATE",
-  items: [
+  eyebrow: "DISCOVER",
+  heading: "OUR MENU",
+  menuUrl: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/menu",
+  cards: [
     {
-      title: "SIGNATURE COCKTAILS",
-      text: "Poured with intent — classics done right and house signatures you will not find anywhere else.",
+      title: "Food Menu",
+      description: "Indian, Chinese, Italian, Continental",
+      buttonText: "Explore Menu",
     },
     {
-      title: "CURATED MUSIC",
-      text: "A soundtrack that knows when to simmer and when to turn up, selected night after night.",
-    },
-    {
-      title: "LATE NIGHT ATMOSPHERE",
-      text: "Dim light, deep seating and a room that feels like it was built for the hours after midnight.",
-    },
-    {
-      title: "PRIVATE EXPERIENCES",
-      text: "Tables, booths and evenings arranged around your occasion — ask when you reserve.",
+      title: "Drink Menu",
+      description: "Cocktails, Mocktails, Shakes, Whisky, Beer, Wine, Rum, Vodka, Gin",
+      buttonText: "Explore Menu",
     },
   ],
 };
@@ -70,6 +65,13 @@ export const location = {
   address: ["Harmu Bypass Road,", "Argora Chowk,", "Ranchi, Jharkhand 834002"],
   mapsUrl: "https://share.google/cEvCwsb39WhXs05yb",
   cta: "GET DIRECTIONS",
+  phone: "+91 92292 34007",
+  email: "reservations@heavenlounge.com",
+  openingHours: [
+    { days: "Monday — Thursday", hours: "6:00 PM — 12:00 AM" },
+    { days: "Friday — Saturday", hours: "6:00 PM — 3:00 AM" },
+    { days: "Sunday", hours: "6:00 PM — 12:00 AM" },
+  ],
   platformsLabel: "ORDER & RESERVE ON",
   platforms: [
     {
@@ -88,6 +90,76 @@ export const location = {
       icon: "https://www.google.com/s2/favicons?sz=128&domain=district.in",
     },
   ],
+};
+
+// Business facts used for structured data, AEO/GEO and accessibility.
+// Factual only — no invented claims.
+export const business = {
+  name: "HEAVEN — Lounge & Bar",
+  url: "https://heaven4.netlify.app/",
+  telephone: "+91 92292 34007",
+  email: "reservations@heavenlounge.com",
+  priceRange: "₹₹",
+  servesCuisine: ["Indian", "Asian", "Continental"],
+  acceptsReservations: true,
+  reservationRequired: false,
+  paymentAccepted: ["Credit cards", "Debit cards", "NFC mobile payments"],
+  // Accessibility
+  wheelchairAccessible: true,
+  accessibilityFeatures: [
+    "Wheelchair-accessible car park",
+    "Wheelchair-accessible toilet",
+  ],
+  // Service options
+  serviceOptions: [
+    "Outdoor seating",
+    "Delivery",
+    "Drive-through",
+    "Takeaway",
+    "Dine-in",
+  ],
+  // Highlights / entertainment
+  highlights: [
+    "Great beer selection",
+    "Great wine list",
+    "Karaoke",
+    "Live music",
+    "Live performances",
+    "Quiz night",
+    "Rooftop seating",
+  ],
+  // Offerings
+  offerings: [
+    "Alcohol",
+    "Beer",
+    "Cocktails",
+    "Dancing",
+    "Food",
+    "Food at bar",
+    "Happy-hour drinks",
+    "Happy-hour food",
+    "Private dining room",
+    "Spirits",
+    "Wine",
+  ],
+  // Dining options
+  seating: true,
+  tableService: true,
+  // Amenities
+  amenities: ["Restroom"],
+  // Atmosphere
+  atmosphere: ["Casual", "Cozy", "Romantic", "Trendy", "Upmarket"],
+  // Crowd
+  crowd: ["Groups", "Solo dining"],
+  // Children
+  goodForKids: true,
+  // Parking
+  parking: ["Free parking lot", "Free street parking", "Plenty of parking"],
+  // Social
+  sameAs: {
+    instagram: "https://www.instagram.com/heavenlounge/",
+    facebook: "https://www.facebook.com/heavenlounge/",
+  },
 };
 
 export const footer = {
