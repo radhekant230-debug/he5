@@ -1,23 +1,27 @@
 import { business } from "../data/content.js";
 
-// Build opening-hours specification from the existing, factual hours.
-const dayMap = {
-  "Monday — Thursday": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-  "Friday — Saturday": ["Friday", "Saturday"],
-  Sunday: ["Sunday"],
-};
-
+// Build opening-hours specification from the existing, factual hours
+// (MON — SUN, 7 PM — 1 AM).
 const openingHoursSpecification = [
-  { days: "Monday — Thursday", opens: "18:00", closes: "00:00" },
-  { days: "Friday — Saturday", opens: "18:00", closes: "03:00" },
-  { days: "Sunday", opens: "18:00", closes: "00:00" },
-]
-  .map((h) => ({
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: dayMap[h.days],
-    opens: h.opens,
-    closes: h.closes,
-  }));
+  {
+    days: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "19:00",
+    closes: "01:00",
+  },
+].map((h) => ({
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: h.days,
+  opens: h.opens,
+  closes: h.closes,
+}));
 
 const schema = {
   "@context": "https://schema.org",
@@ -44,7 +48,7 @@ const schema = {
   priceRange: business.priceRange,
   acceptsReservations: business.acceptsReservations,
   hasLiveMusic: true,
-  menu: "https://heaven4.netlify.app/#drinks",
+  menu: "https://heaven4.netlify.app/#menu",
   paymentAccepted: business.paymentAccepted,
   amenityFeature: business.accessibilityFeatures.map((name) => ({
     "@type": "AccessibilityFeature",

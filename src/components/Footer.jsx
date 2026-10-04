@@ -1,32 +1,45 @@
-import { footer } from "../data/content.js";
+import { footer, location } from "../data/content.js";
+import { logoImage } from "../data/media.js";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="wrap footer__grid">
         <div className="footer__brand">
-          <p className="footer__name">{footer.brand}</p>
-          <p className="footer__sub">{footer.subtitle}</p>
+          <img className="footer__emblem" src={logoImage} alt="HEAVEN emblem" loading="lazy" />
+          <span className="footer__name">{footer.brand}</span>
+          <span className="footer__sub">{footer.subtitle}</span>
         </div>
-        <ul className="footer__links">
+
+        <nav className="footer__col" aria-label="Footer">
           {footer.links.map((l) => (
-            <li key={l.label}>
-              <a
-                href={l.href}
-                {...(l.href.startsWith("http")
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
-              >
-                {l.label}
-              </a>
-            </li>
+            <a key={l.label} href={l.href}>
+              {l.label}
+            </a>
           ))}
-        </ul>
+        </nav>
+
+        <nav className="footer__col" aria-label="Social">
+          {footer.social.map((s) => (
+            <a key={s.label} href={s.href}>
+              {s.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="footer__col footer__info">
+          {location.address.map((line) => (
+            <span key={line}>{line}</span>
+          ))}
+          <span className="footer__hours">{location.hours[0]}</span>
+          <span className="footer__hours">{location.hours[1]}</span>
+        </div>
       </div>
-      <p className="footer__copy">
-        &copy; {new Date().getFullYear()} HEAVEN Lounge &amp; Bar. All rights
-        reserved.
-      </p>
+
+      <div className="wrap footer__base">
+        <span>© {new Date().getFullYear()}</span>
+        <span>{footer.copyright}</span>
+      </div>
     </footer>
   );
 }

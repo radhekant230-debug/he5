@@ -1,40 +1,29 @@
 import { hero } from "../data/content.js";
 import { heroMedia } from "../data/media.js";
-import Button from "./Button.jsx";
 
 export default function Hero() {
-  const hasVideo = heroMedia.type === "video" && heroMedia.src;
-  const hasImage = heroMedia.type === "image" && heroMedia.src;
-
   return (
-    <section className={`hero${hasVideo || hasImage ? "" : " hero--fallback"}`} id="top">
-      {hasVideo && (
-        <video
-          className="hero__media"
-          src={heroMedia.src}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-      )}
-      {hasImage && <img className="hero__media" src={heroMedia.src} alt="HEAVEN Lounge & Bar" />}
+    <section className="hero" id="top">
+      <div className="hero__media" aria-hidden="true">
+        <img src={heroMedia.src} alt="" className="hero__img" />
+        <div className="hero__veil" />
+      </div>
 
-      <div className="hero__overlay" />
-
-      <div className="hero__content">
+      <div className="hero__inner">
         <h1 className="hero__title">{hero.title}</h1>
-        <p className="hero__subtitle">{hero.subtitle}</p>
+        <span className="hero__subtitle">{hero.subtitle}</span>
         <p className="hero__tagline">{hero.tagline}</p>
         <div className="hero__actions">
-          <Button href={hero.primary.href} variant="solid">
+          <a className="btn btn--ghost" href={hero.primary.href}>
             {hero.primary.label}
-          </Button>
-          <Button href={hero.secondary.href}>{hero.secondary.label}</Button>
+          </a>
+          <a className="btn btn--ghost" href={hero.secondary.href}>
+            {hero.secondary.label}
+          </a>
         </div>
       </div>
 
-      <a className="hero__scroll" href="#slider" aria-label="Scroll down">
+      <a className="hero__scroll" href={hero.secondary.href} aria-label="Scroll down">
         SCROLL
       </a>
     </section>

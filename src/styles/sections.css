@@ -1,463 +1,431 @@
 /* =========================================================
-   PREMIUM WHITE & BROWN THEME — non-home sections only.
-   Scope: About / Experience / Drinks / Bakery / Gallery /
-   Location. The home hero, navbar and footer keep their
-   existing dark palette (Bebas Neue / Oswald / Jost) untouched.
+   SECTIONS — editorial layouts for the redesigned site.
    ========================================================= */
 
-:root {
-  --ivory: #F7F3ED;
-  --white: #FFFFFF;
-  --espresso: #3A2418;
-  --dark-brown: #24150F;
-  --warm-brown: #7A5842;
-  --beige: #E8DED2;
-  --ink: #3A2418;
-  --line-brown: #D4C4B4;
-}
+/* ---------- 03 Introduction ---------- */
 
-/* Typography & Colors for Non-Home Sections */
-.section-title,
-.location__panel h3,
-.experience__title {
-  font-family: "Playfair Display", "Cormorant Garamond", serif;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--espresso);
-}
-
-.about .eyebrow,
-.experience .eyebrow,
-.drinks .eyebrow,
-.bakery .eyebrow,
-.gallery .eyebrow,
-.location .eyebrow,
-.location__panel .eyebrow {
-  letter-spacing: 0.42em;
-  font-weight: 400;
-  color: var(--warm-brown);
-}
-
-.about__text p,
-.drinks__intro p,
-.bakery__text p,
-.gallery__text,
-.drinks__item p,
-.location__grid > div:first-child p,
-.location__panel p,
-.location__address,
-.location__hours-row,
-.drinks__price,
-.drinks__note,
-.platforms__label,
-.gallery__empty p,
-.experience__deck {
-  font-family: "Manrope", "Jost", sans-serif;
-  font-weight: 300;
-  color: var(--dark-brown);
-  letter-spacing: 0.02em;
-}
-
-/* ---------- Non-home section backgrounds ---------- */
-.about,
-.drinks,
-.gallery {
-  background: var(--ivory);
-}
-.bakery,
-.location {
-  background: var(--beige);
-}
-.about .rule,
-.drinks .rule,
-.bakery .rule,
-.gallery .rule,
-.location .rule,
-.experience .rule {
-  background: var(--warm-brown);
-}
-
-/* ---------- Buttons on non-home pages ---------- */
-.about .btn,
-.drinks .btn,
-.bakery .btn,
-.gallery .btn,
-.location .btn,
-.location__panel .btn,
-.experience .btn,
-.location__panel .btn--solid {
-  background: var(--warm-brown);
-  border-color: var(--warm-brown);
-  color: var(--white);
-}
-.about .btn:hover,
-.drinks .btn:hover,
-.bakery .btn:hover,
-.gallery .btn:hover,
-.location .btn:hover,
-.location__panel .btn:hover,
-.experience .btn:hover,
-.location__panel .btn--solid:hover {
-  background: var(--espresso);
-  border-color: var(--espresso);
-  color: var(--white);
-}
-
-/* ---------- Video section (Home page related, kept dark) ---------- */
-.video-section { padding: 0; }
-.video-section__frame {
-  position: relative;
-  height: clamp(300px, 52vw, 560px);
-  overflow: hidden;
-  background: var(--espresso);
-}
-.video-section__frame video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video-section__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 17, 13, 0.35);
-}
-.video-section__caption {
-  position: absolute;
-  left: 0; right: 0; bottom: 40px;
-  text-align: center;
-  z-index: 2;
-}
-.video-section__caption .eyebrow { color: var(--bronze-soft); margin-bottom: 8px; }
-.video-section__caption p {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  font-size: clamp(22px, 3vw, 30px);
-  color: var(--text);
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
-}
-
-/* ---------- About ---------- */
-.about__grid {
+.intro { background: var(--black); }
+.intro__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(40px, 7vw, 110px);
   align-items: center;
 }
-.about__text p { margin-bottom: 18px; max-width: 520px; }
-.about__media img {
-  width: 100%;
-  height: clamp(360px, 46vw, 540px);
-  object-fit: cover;
-}
-
-/* ---------- Experience / Our Menu ---------- */
-.experience {
-  background: var(--ivory);
-}
-.experience__head {
-  text-align: center;
-  margin-bottom: 64px;
-}
-.experience__head .rule {
-  margin: 30px auto;
-}
-
-.menu-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-.menu-card {
-  background: var(--white);
-  padding: 64px 48px;
-  border: 1px solid var(--line-brown);
+.intro__paras {
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  gap: 20px;
+  max-width: 480px;
+  color: var(--stone);
+  font-size: 16.5px;
 }
-.menu-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(58, 36, 24, 0.08);
-  border-color: var(--warm-brown);
-}
-.menu-card__content {
-  margin-bottom: 40px;
-}
-.menu-card__title {
-  font-family: "Playfair Display", "Cormorant Garamond", serif;
-  font-size: clamp(28px, 4vw, 42px);
-  color: var(--espresso);
-  margin-bottom: 16px;
-}
-.menu-card__desc {
-  font-family: "Manrope", "Jost", sans-serif;
-  font-size: 16px;
-  color: var(--warm-brown);
-  letter-spacing: 0.04em;
-  max-width: 280px;
-}
-
-/* ---------- Drinks ---------- */
-.drinks__grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 80px;
-  align-items: start;
-}
-.drinks__intro p { max-width: 380px; }
-.drinks__media { margin-top: 40px; }
-.drinks__media img {
+.intro__media { margin: 0; }
+.intro__media img {
   width: 100%;
-  height: 320px;
+  height: clamp(420px, 62vw, 680px);
   object-fit: cover;
 }
-.drinks__list {
-  padding: 0;
+
+/* ---------- 04 Experience ---------- */
+
+.experience { background: var(--coal); }
+.experience__head { margin-bottom: clamp(48px, 7vw, 96px); }
+.experience__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(40px, 6vw, 72px) clamp(24px, 4vw, 48px);
 }
-.drinks__item {
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line-brown);
+.experience__item { display: flex; flex-direction: column; gap: 22px; }
+.experience__item--1 { grid-column: 1 / span 7; }
+.experience__item--2 { grid-column: 8 / span 5; margin-top: clamp(0px, 8vw, 110px); }
+.experience__item--3 { grid-column: 1 / span 5; }
+.experience__item--4 { grid-column: 7 / span 6; margin-top: clamp(0px, 4vw, -60px); }
+
+.experience__media { margin: 0; }
+.experience__media img { width: 100%; object-fit: cover; }
+.experience__item--1 .experience__media img,
+.experience__item--4 .experience__media img { aspect-ratio: 16 / 10; }
+.experience__item--2 .experience__media img,
+.experience__item--3 .experience__media img { aspect-ratio: 3 / 4; }
+
+.experience__cat {
+  font-size: 10.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne);
 }
-.drinks__item:first-child { border-top: 1px solid var(--line-brown); }
-.drinks__row { display: flex; align-items: baseline; gap: 16px; }
-.drinks__row h3 {
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  color: var(--espresso);
-}
-.drinks__dots {
-  flex: 1;
-  border-bottom: 1px dotted var(--warm-brown);
-  transform: translateY(-5px);
-}
-.drinks__price { font-size: 15px; letter-spacing: 0.08em; color: var(--warm-brown); }
-.drinks__item p { font-size: 14.5px; margin-top: 6px; }
-.drinks__note {
-  text-align: center;
-  margin-top: 56px;
-  font-size: 12.5px;
-  letter-spacing: 0.18em;
+.experience__body h3 {
+  margin: 10px 0 12px;
+  font-size: clamp(24px, 3vw, 36px);
   text-transform: uppercase;
 }
+.experience__body p { color: var(--stone); max-width: 420px; }
 
-/* ---------- Bakery ---------- */
-.bakery__grid {
+/* ---------- 05 Signature cocktails ---------- */
+
+.cocktails { background: var(--black); }
+.cocktails__grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+.cocktails__intro {
+  margin-top: 28px;
+  color: var(--stone);
+  max-width: 420px;
+}
+.cocktails__menu {
+  list-style: none;
+  margin: 40px 0 36px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cocktails__row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cocktails__info { display: flex; flex-direction: column; gap: 4px; }
+.cocktails__name {
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: var(--ivory);
+}
+.cocktails__desc { font-size: 13px; color: var(--stone); opacity: 0.8; }
+.cocktails__dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--line-strong);
+  transform: translateY(-4px);
+}
+.cocktails__price {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--champagne);
+}
+
+.cocktails__media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.cocktails__feature { margin: 0; width: 100%; }
+.cocktails__feature img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.cocktails__support { margin: 0; }
+.cocktails__support img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.cocktails__support--a { width: 62%; margin-right: 12%; }
+.cocktails__support--b { width: 48%; align-self: flex-start; margin-left: 8%; }
+
+/* ---------- 06 Food ---------- */
+
+.food { background: var(--coal); }
+.food__head { max-width: 720px; margin-bottom: clamp(40px, 6vw, 80px); }
+.food__text { margin-top: 26px; color: var(--stone); max-width: 460px; }
+.food__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 22px;
+}
+.food__feature { margin: 0; grid-column: 1 / span 7; grid-row: span 2; }
+.food__feature img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
+.food__support { margin: 0; grid-column: 8 / span 5; }
+.food__support img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.food__support--b img { object-fit: contain; background: #fff; }
+.food__support--b { margin-top: 22px; }
+.food__cta { margin-top: 44px; }
+
+/* ---------- 07 Full-width break ---------- */
+
+.break {
+  position: relative;
+  min-height: 82vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px var(--gutter);
 }
-.bakery__media img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+.break__veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.55);
 }
-.bakery__text p { max-width: 480px; }
+.break__text {
+  position: relative;
+  font-size: clamp(44px, 9vw, 120px);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.break__line { display: block; }
 
-/* ---------- Gallery ---------- */
-.gallery__text { max-width: 520px; }
-.gallery__grid {
+/* ---------- 08 Gallery ---------- */
+
+.gallery { background: var(--black); }
+.gallery__head { margin-bottom: clamp(40px, 6vw, 80px); }
+.gallery__masonry {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 240px;
-  gap: 16px;
-  margin-top: 56px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 210px;
+  gap: 18px;
 }
 .gallery__cell {
   position: relative;
+  margin: 0;
   overflow: hidden;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  background: var(--dark-brown);
 }
-.gallery__cell--feature { grid-column: span 2; grid-row: span 2; }
-.gallery__cell--tall { grid-row: span 2; }
 .gallery__cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.25, 0, 0.25, 1);
+  transition: transform 1s var(--ease);
 }
-.gallery__cell:hover img { transform: scale(1.05); }
-.gallery__cell::after {
-  content: "";
+.gallery__cell:hover img { transform: scale(1.06); }
+.gallery__cell figcaption {
   position: absolute;
   inset: 0;
-  background: rgba(20, 17, 13, 0.25);
-  transition: background 0.5s ease;
-}
-.gallery__cell:hover::after { background: rgba(20, 17, 13, 0); }
-.gallery__empty {
-  margin-top: 56px;
-  min-height: 300px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--warm-brown);
-  background: var(--beige);
+  align-items: flex-end;
+  padding: 20px;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background: linear-gradient(to top, rgba(17, 17, 17, 0.75), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
 }
-.gallery__empty p {
-  font-size: 12px;
-  letter-spacing: 0.36em;
-}
+.gallery__cell:hover figcaption { opacity: 1; }
 
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5vh 5vw;
-  background: rgba(15, 13, 10, 0.92);
-  cursor: zoom-out;
-}
-.lightbox img {
-  max-width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
-  cursor: default;
-}
-.lightbox__close {
-  position: absolute;
-  top: 20px; right: 28px;
-  background: none;
-  border: 0;
-  color: var(--text);
-  font-size: 40px;
-  line-height: 1;
-  cursor: pointer;
-}
+.gallery__cell--1 { grid-column: span 7; grid-row: span 2; }
+.gallery__cell--2 { grid-column: span 5; }
+.gallery__cell--3 { grid-column: span 5; }
+.gallery__cell--4 { grid-column: span 4; grid-row: span 2; }
+.gallery__cell--5 { grid-column: span 4; grid-row: span 2; }
+.gallery__cell--6 { grid-column: span 4; grid-row: span 2; }
+.gallery__cell--7 { grid-column: span 6; }
+.gallery__cell--8 { grid-column: span 6; }
 
-/* ---------- Location ---------- */
-.location__grid {
+/* ---------- 09 Events ---------- */
+
+.events { background: var(--coal); }
+.events__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
 }
-.location__grid > div:first-child p { max-width: 440px; }
-.location__address {
-  font-style: normal;
-  margin-top: 26px;
-  font-size: 15.5px;
-  line-height: 1.9;
-  letter-spacing: 0.04em;
+.events__media { margin: 0; position: sticky; top: 110px; }
+.events__media img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.events__list {
+  list-style: none;
+  margin: 36px 0 40px;
+  padding: 0;
 }
-.location__address span { display: block; }
-.location__panel {
+.events__row {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 24px;
+  align-items: baseline;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.events__row:first-child { border-top: 1px solid var(--line); }
+.events__date {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--champagne);
+}
+.events__info h3 {
+  font-size: clamp(20px, 2.4vw, 28px);
+  text-transform: uppercase;
+}
+.events__info p { margin-top: 6px; font-size: 14px; color: var(--stone); }
+.events__time { font-size: 12px; letter-spacing: 0.16em; color: var(--stone); }
+
+/* ---------- 10 Social ---------- */
+
+.social { background: var(--black); }
+.social__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.social__handle {
+  font-size: clamp(40px, 7vw, 88px);
+  text-transform: uppercase;
+}
+.social__strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.social__cell { margin: 0; overflow: hidden; }
+.social__cell img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+.social__cell:hover img { transform: scale(1.05); }
+
+/* ---------- 11 Reservation ---------- */
+
+.reserve {
+  background: var(--black);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.reserve__inner {
+  max-width: 820px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 18px;
-  padding: 64px 40px;
-  border: 1px solid var(--warm-brown);
-  background: var(--white);
 }
-.location__panel .eyebrow { margin-bottom: 0; }
-.location__panel h3 { font-size: clamp(26px, 3vw, 34px); }
-.location__panel p { max-width: 340px; }
-.location__panel .btn { margin-top: 10px; }
-
-.location__hours {
+.reserve__sub { margin-top: 22px; color: var(--stone); }
+.reserve__form {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 18px;
+  align-items: end;
   width: 100%;
-  margin-top: 18px;
-  border-top: 1px solid var(--line-brown);
-  padding-top: 22px;
+}
+.reserve__field {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-align: left;
 }
-.location__hours-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  font-size: 14px;
-}
-.location__hours-row span:first-child {
-  letter-spacing: 0.08em;
+.reserve__field span {
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  font-size: 11px;
+  color: var(--stone);
 }
-.location__hours-row span:last-child { color: var(--warm-brown); }
+.reserve__field input,
+.reserve__field select {
+  width: 100%;
+  padding: 14px 4px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--ivory);
+  font-family: var(--sans);
+  font-size: 14px;
+  color-scheme: dark;
+  outline: none;
+  transition: border-color 0.3s var(--ease);
+}
+.reserve__field input:focus,
+.reserve__field select:focus { border-bottom-color: var(--champagne); }
+.reserve__field select option { background: var(--coal); }
+.reserve__submit { width: 100%; }
+.reserve__note { margin-top: 18px; font-size: 12px; color: var(--stone); opacity: 0.7; }
 
-/* ---------- Order / reserve platforms ---------- */
-.platforms {
+/* ---------- 12 Location ---------- */
+
+.location { background: var(--black); }
+.location__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: end;
+}
+.location__address {
+  margin-top: 34px;
+  font-style: normal;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin-top: 8px;
+  gap: 4px;
+  color: var(--stone);
+  font-size: 16px;
 }
-.platforms__label {
-  font-size: 10.5px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-.platforms__row {
+.location__hours {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
 }
-.platforms__link {
-  display: block;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--line-brown);
-  background: #fff;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+.location__hours-label {
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 10px;
 }
-.platforms__link img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.location__days { font-size: 14px; letter-spacing: 0.18em; color: var(--stone); }
+.location__time {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--ivory);
 }
-.platforms__link:hover,
-.platforms__link:focus-visible {
-  transform: translateY(-3px);
-  border-color: var(--warm-brown);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* ---------- Media placeholders ---------- */
-.media-placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  background:
-    radial-gradient(ellipse at 50% 35%, rgba(122, 88, 66, 0.12), transparent 60%),
-    var(--beige);
-  border: 1px solid var(--warm-brown);
-}
+.location__cta { margin-top: 28px; }
 
 /* ---------- Responsive ---------- */
+
 @media (max-width: 960px) {
-  .about__grid,
-  .drinks__grid,
-  .bakery__grid,
-  .location__grid { grid-template-columns: 1fr; gap: 52px; }
-  .menu-cards { gap: 24px; }
-  .gallery__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
+  .intro__grid,
+  .cocktails__grid,
+  .events__grid,
+  .location__grid { grid-template-columns: 1fr; }
+
+  .experience__list { grid-template-columns: 1fr; }
+  .experience__item--1,
+  .experience__item--2,
+  .experience__item--3,
+  .experience__item--4 { grid-column: auto; margin-top: 0; }
+  .experience__item--2 .experience__media img,
+  .experience__item--3 .experience__media img { aspect-ratio: 4 / 3; }
+
+  .cocktails__support--a { margin-right: 0; width: 70%; }
+  .cocktails__support--b { margin-left: 0; width: 60%; }
+
+  .food__grid { grid-template-columns: 1fr; }
+  .food__feature,
+  .food__support { grid-column: auto; grid-row: auto; }
+  .food__feature img { min-height: 0; aspect-ratio: 4 / 3; }
+  .food__support--b { margin-top: 0; }
+
+  .break { background-attachment: scroll; }
+
+  .gallery__masonry { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+  .gallery__cell--1 { grid-column: span 2; grid-row: span 2; }
+  .gallery__cell--2,
+  .gallery__cell--3 { grid-column: span 1; }
+  .gallery__cell--4,
+  .gallery__cell--5 { grid-column: span 1; grid-row: span 2; }
+  .gallery__cell--6,
+  .gallery__cell--7,
+  .gallery__cell--8 { grid-column: span 2; grid-row: span 1; }
+
+  .events__media { position: static; }
+  .events__media img { aspect-ratio: 16 / 10; }
+
+  .social__strip {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .social__cell { flex: 0 0 68%; scroll-snap-align: start; }
+
+  .reserve__form { grid-template-columns: 1fr; }
 }
-@media (max-width: 768px) {
-  .menu-cards { grid-template-columns: 1fr; }
-  .menu-card { padding: 48px 32px; }
-}
-@media (max-width: 560px) {
-  .gallery__grid { grid-template-columns: 1fr; }
-  .gallery__cell--feature,
-  .gallery__cell--tall { grid-column: auto; grid-row: auto; }
-  .hero__actions .btn { width: 100%; text-align: center; }
+
+@media (max-width: 480px) {
+  .gallery__masonry { grid-auto-rows: 150px; }
+  .events__row { grid-template-columns: 1fr; gap: 6px; }
 }

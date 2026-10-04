@@ -1,13 +1,21 @@
+/* =========================================================
+   CONTENT — all copy for the redesigned HEAVEN site.
+   Real business facts (address, maps link, booking platforms,
+   hours) are preserved exactly as provided. Menu / event
+   specifics remain clearly-marked placeholders until the real
+   data is supplied.
+   ========================================================= */
+
 export const nav = {
   brand: "HEAVEN",
   links: [
     { label: "ABOUT", href: "#about" },
     { label: "EXPERIENCE", href: "#experience" },
-    { label: "DRINKS", href: "#drinks" },
+    { label: "DRINKS", href: "#menu" },
     { label: "GALLERY", href: "#gallery" },
     { label: "CONTACT", href: "#contact" },
   ],
-  cta: { label: "RESERVE", href: "#contact" },
+  cta: { label: "RESERVE", href: "#reserve" },
 };
 
 export const hero = {
@@ -15,160 +23,172 @@ export const hero = {
   subtitle: "LOUNGE & BAR",
   tagline:
     "Low light, slow evenings and cocktails poured with intent — an evening worth remembering.",
-  primary: { label: "RESERVE A TABLE", href: "#contact" },
-  secondary: { label: "EXPLORE", href: "#slider" },
+  primary: { label: "RESERVE A TABLE", href: "#reserve" },
+  secondary: { label: "EXPLORE", href: "#about" },
 };
 
-export const about = {
-  eyebrow: "THE LOUNGE",
-  heading: ["AN EVENING", "WORTH REMEMBERING."],
+export const intro = {
+  eyebrow: "WELCOME TO HEAVEN",
+  heading: ["A PLACE", "ABOVE THE", "ORDINARY."],
   paragraphs: [
-    "HEAVEN was made for the hours after dark — a room where the light is low, the music is curated, and nobody hurries you toward the door.",
+    "HEAVEN is a room built for the hours after dark — low light, curated music and a bar that pours with intent.",
     "Every detail is deliberate: the weight of the glass, the warmth of the booth, the first sip that tells you the night has officially begun.",
   ],
 };
 
 export const experience = {
-  eyebrow: "DISCOVER",
-  heading: "OUR MENU",
-  menuUrl: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/menu",
-  cards: [
+  eyebrow: "THE EXPERIENCE",
+  heading: ["THE HEAVEN", "EXPERIENCE"],
+  items: [
     {
-      title: "Food Menu",
-      description: "Indian, Chinese, Italian, Continental",
-      buttonText: "Explore Menu",
+      category: "THE BAR",
+      title: "SIGNATURE COCKTAILS",
+      text: "Classics done right and house signatures you will not find anywhere else.",
     },
     {
-      title: "Drink Menu",
-      description: "Cocktails, Mocktails, Shakes, Whisky, Beer, Wine, Rum, Vodka, Gin",
-      buttonText: "Explore Menu",
+      category: "THE KITCHEN",
+      title: "GOURMET DINING",
+      text: "Small plates and slow dinners, plated with the same care as the pour.",
+    },
+    {
+      category: "THE STAGE",
+      title: "LIVE MUSIC",
+      text: "A soundtrack that knows when to simmer and when to turn up.",
+    },
+    {
+      category: "AFTER DARK",
+      title: "LATE NIGHTS",
+      text: "Dim light and deep seating, built for the hours after midnight.",
     },
   ],
 };
 
-export const bakery = {
-  eyebrow: "THE BAKERY",
-  heading: ["BAKERY &", "SWEET MOMENTS"],
-  text: "Small-batch bakes, finished by hand and served through the evening. Whatever the day's oven brings, it is plated with the same care as everything else at HEAVEN — a quiet, sweet ending to a long night.",
+export const cocktails = {
+  eyebrow: "THE BAR",
+  heading: ["SIGNATURE", "COCKTAILS"],
+  intro:
+    "A short list poured with intent. Tell the bartender the mood, not the order.",
+  cta: "VIEW FULL MENU",
+  menuUrl: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/order",
+};
+
+export const food = {
+  eyebrow: "THE KITCHEN",
+  heading: ["SIGNATURE", "BITES"],
+  text: "A rotating kitchen of small plates and sweet endings — the day's menu lives at the bar.",
+  cta: "EXPLORE FOOD MENU",
+  menuUrl: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/order",
+};
+
+export const imageBreak = {
+  lines: ["THE NIGHT", "STARTS HERE."],
 };
 
 export const gallery = {
   eyebrow: "GALLERY",
-  heading: "INSIDE THE NIGHT",
-  text: "A glimpse of the room before you step into it.",
+  heading: ["INSIDE", "THE NIGHT"],
 };
+
+export const events = {
+  eyebrow: "WHAT'S ON",
+  heading: ["UPCOMING", "NIGHTS"],
+  // PLACEHOLDERS — replace with the real programming when available.
+  items: [
+    {
+      date: "—",
+      name: "Upcoming Night 01",
+      text: "Placeholder — replace with the real event.",
+      time: "TBA",
+    },
+    {
+      date: "—",
+      name: "Upcoming Night 02",
+      text: "Placeholder — replace with the real event.",
+      time: "TBA",
+    },
+    {
+      date: "—",
+      name: "Upcoming Night 03",
+      text: "Placeholder — replace with the real event.",
+      time: "TBA",
+    },
+  ],
+  cta: "RESERVE YOUR NIGHT",
+  ctaHref: "#reserve",
+};
+
+export const social = {
+  eyebrow: "FOLLOW THE NIGHT",
+  handle: "@HEAVEN",
+  cta: "FOLLOW US",
+  href: "#",
+};
+
+export const reservation = {
+  eyebrow: "RESERVATIONS",
+  heading: ["YOUR TABLE", "IS WAITING."],
+  sub: "Make tonight unforgettable.",
+  note: "Availability is confirmed on our booking partner.",
+  cta: "CHECK AVAILABILITY",
+  bookingUrl: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/order",
+  times: ["7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM", "12:00 AM"],
+  guests: ["1", "2", "3", "4", "5", "6", "7", "8+"],
+};
+
+// Real booking platforms — preserved from the previous build.
+export const platforms = [
+  {
+    name: "Zomato",
+    href: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/order",
+    icon: "https://www.google.com/s2/favicons?sz=128&domain=zomato.com",
+  },
+  {
+    name: "EazyDiner",
+    href: "https://www.eazydiner.com/ranchi/heaven-lounge-and-bar-argora-ranchi-696322",
+    icon: "https://www.google.com/s2/favicons?sz=128&domain=eazydiner.com",
+  },
+  {
+    name: "District by Zomato",
+    href: "https://www.district.in/dining/ranchi/heaven-lounge-ashok-nagar",
+    icon: "https://www.google.com/s2/favicons?sz=128&domain=district.in",
+  },
+];
 
 export const location = {
-  eyebrow: "FIND US",
-  heading: "LOCATION & RESERVATIONS",
-  text: "Walk in after sunset, or reserve ahead for the weekends — the room fills quickly once the music starts.",
+  eyebrow: "FIND HEAVEN",
+  heading: ["RANCHI", "JHARKHAND"],
   address: ["Harmu Bypass Road,", "Argora Chowk,", "Ranchi, Jharkhand 834002"],
-  mapsUrl: "https://share.google/cEvCwsb39WhXs05yb",
+  hours: ["MON — SUN", "7 PM — 1 AM"],
   cta: "GET DIRECTIONS",
-  phone: "+91 92292 34007",
-  email: "reservations@heavenlounge.com",
-  openingHours: [
-    { days: "Monday — Thursday", hours: "6:00 PM — 12:00 AM" },
-    { days: "Friday — Saturday", hours: "6:00 PM — 3:00 AM" },
-    { days: "Sunday", hours: "6:00 PM — 12:00 AM" },
-  ],
-  platformsLabel: "ORDER & RESERVE ON",
-  platforms: [
-    {
-      name: "Zomato",
-      href: "https://www.zomato.com/ranchi/heaven-lounge-ashok-nagar/order",
-      icon: "https://www.google.com/s2/favicons?sz=128&domain=zomato.com",
-    },
-    {
-      name: "EazyDiner",
-      href: "https://www.eazydiner.com/ranchi/heaven-lounge-and-bar-argora-ranchi-696322",
-      icon: "https://www.google.com/s2/favicons?sz=128&domain=eazydiner.com",
-    },
-    {
-      name: "District by Zomato",
-      href: "https://www.district.in/dining/ranchi/heaven-lounge-ashok-nagar",
-      icon: "https://www.google.com/s2/favicons?sz=128&domain=district.in",
-    },
-  ],
-};
-
-// Business facts used for structured data, AEO/GEO and accessibility.
-// Factual only — no invented claims.
-export const business = {
-  name: "HEAVEN — Lounge & Bar",
-  url: "https://heaven4.netlify.app/",
-  telephone: "+91 92292 34007",
-  email: "reservations@heavenlounge.com",
-  priceRange: "₹₹",
-  servesCuisine: ["Indian", "Asian", "Continental"],
-  acceptsReservations: true,
-  reservationRequired: false,
-  paymentAccepted: ["Credit cards", "Debit cards", "NFC mobile payments"],
-  // Accessibility
-  wheelchairAccessible: true,
-  accessibilityFeatures: [
-    "Wheelchair-accessible car park",
-    "Wheelchair-accessible toilet",
-  ],
-  // Service options
-  serviceOptions: [
-    "Outdoor seating",
-    "Delivery",
-    "Drive-through",
-    "Takeaway",
-    "Dine-in",
-  ],
-  // Highlights / entertainment
-  highlights: [
-    "Great beer selection",
-    "Great wine list",
-    "Karaoke",
-    "Live music",
-    "Live performances",
-    "Quiz night",
-    "Rooftop seating",
-  ],
-  // Offerings
-  offerings: [
-    "Alcohol",
-    "Beer",
-    "Cocktails",
-    "Dancing",
-    "Food",
-    "Food at bar",
-    "Happy-hour drinks",
-    "Happy-hour food",
-    "Private dining room",
-    "Spirits",
-    "Wine",
-  ],
-  // Dining options
-  seating: true,
-  tableService: true,
-  // Amenities
-  amenities: ["Restroom"],
-  // Atmosphere
-  atmosphere: ["Casual", "Cozy", "Romantic", "Trendy", "Upmarket"],
-  // Crowd
-  crowd: ["Groups", "Solo dining"],
-  // Children
-  goodForKids: true,
-  // Parking
-  parking: ["Free parking lot", "Free street parking", "Plenty of parking"],
-  // Social
-  sameAs: {
-    instagram: "https://www.instagram.com/heavenlounge/",
-    facebook: "https://www.facebook.com/heavenlounge/",
-  },
+  mapsUrl: "https://share.google/cEvCwsb39WhXs05yb",
 };
 
 export const footer = {
   brand: "HEAVEN",
   subtitle: "LOUNGE & BAR",
   links: [
-    { label: "Instagram", href: "#" },
-    { label: "Contact", href: "#contact" },
-    { label: "Location", href: "#location" },
-    { label: "Reserve", href: "#contact" },
+    { label: "EXPERIENCE", href: "#experience" },
+    { label: "MENU", href: "#menu" },
+    { label: "GALLERY", href: "#gallery" },
+    { label: "EVENTS", href: "#events" },
+    { label: "CONTACT", href: "#contact" },
   ],
+  social: [
+    { label: "INSTAGRAM", href: "#" },
+    { label: "FACEBOOK", href: "#" },
+    { label: "WHATSAPP", href: "#" },
+  ],
+  copyright: "HEAVEN Lounge & Bar. All rights reserved.",
+};
+
+// Structured-data (SEO) facts. Contact fields are intentionally
+// omitted until real values are supplied — never invent them.
+export const business = {
+  name: "HEAVEN — Lounge & Bar",
+  url: "https://heaven4.netlify.app/",
+  servesCuisine: ["Cocktails", "Small plates", "Desserts"],
+  priceRange: "₹₹",
+  acceptsReservations: "True",
+  accessibilityFeatures: [],
+  sameAs: {},
 };

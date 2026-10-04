@@ -1,25 +1,26 @@
 import "../styles/navbar.css";
 import "../styles/hero.css";
-import "../styles/slider.css";
 import "../styles/sections.css";
 import "../styles/footer.css";
 
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
-import ImageSlider from "../components/ImageSlider.jsx";
-import VideoSection from "../components/VideoSection.jsx";
 import About from "../components/About.jsx";
 import Experience from "../components/Experience.jsx";
 import Drinks from "../components/Drinks.jsx";
 import Bakery from "../components/Bakery.jsx";
+import ImageBreak from "../components/ImageBreak.jsx";
 import Gallery from "../components/Gallery.jsx";
+import Events from "../components/Events.jsx";
+import Social from "../components/Social.jsx";
+import Reservation from "../components/Reservation.jsx";
 import Location from "../components/Location.jsx";
 import Footer from "../components/Footer.jsx";
 import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
+    const els = document.querySelectorAll(".reveal, .reveal-img");
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("in-view"));
       return;
@@ -44,13 +45,15 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <ImageSlider />
-        <VideoSection />
         <About />
         <Experience />
         <Drinks />
         <Bakery />
+        <ImageBreak />
         <Gallery />
+        <Events />
+        <Social />
+        <Reservation />
         <Location />
       </main>
       <Footer />
